@@ -1,6 +1,12 @@
 # Project Charta
 ## Context and Scope
-Describe the context (domain/business area) and topic of the visualization project. Which topical aspects should be addressed? Which question(s) should the data visualization project answer? What are the expected benefits of the project? Where should the visualization product be published (e.g. website, app, intranet)?
+This project focuses on the analysis of meteorite landings worldwide. Meteorites are classified based on their composition and recorded with attributes such as mass, location, and year of discovery.
+
+The main goal is to explore patterns in meteorite distribution, size, and classification. The project aims to answer questions such as where meteorites most frequently land, how their mass varies, and which types are most common.
+
+The expected benefit is to provide an accessible and visually intuitive understanding of meteorite data for educational and exploratory purposes.
+
+The visualization product will be published as an online data story using a Quarto-based website hosted on GitHub Pages.
 
 ## Project Objectives and Success Criteria
 Describe the objectives **from the client/stakeholder perspective**. For example: "Enable users to understand the distribution of sales across different regions". Try to be as specific as possible, but restrict to the concrete needs formulated by the client/stakeholders. For example: if a dashboard is needed explicitly, then state it here, otherwise leave the form of the visualization product open.
