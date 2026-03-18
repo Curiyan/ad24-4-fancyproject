@@ -1,51 +1,141 @@
 # Project Charta
 ## Context and Scope
-This project focuses on the analysis of meteorite landings worldwide. Meteorites are classified based on their composition and recorded with attributes such as mass, location, and year of discovery.
-
-The main goal is to explore patterns in meteorite distribution, size, and classification. The project aims to answer questions such as where meteorites most frequently land, how their mass varies, and which types are most common.
-
+This project focuses on the analysis of meteorite landings worldwide. Meteorites are classified based on their composition and recorded with 
+attributes such as mass, location, and year of discovery.
+The main goal is to explore patterns in meteorite distribution, size, and classification. The project aims to answer questions such as where 
+meteorites most frequently land, how their mass varies, and which types are most common.
 The expected benefit is to provide an accessible and visually intuitive understanding of meteorite data for educational and exploratory purposes.
-
 The visualization product will be published as an online data story using a Quarto-based website hosted on GitHub Pages.
 
 ## Project Objectives and Success Criteria
-Describe the objectives **from the client/stakeholder perspective**. For example: "Enable users to understand the distribution of sales across different regions". Try to be as specific as possible, but restrict to the concrete needs formulated by the client/stakeholders. For example: if a dashboard is needed explicitly, then state it here, otherwise leave the form of the visualization product open.
+Objective:
+Enable users to understand global patterns of meteorite landings, including geographic distribution, mass variation, and classification types.
 
-Formulate success criteria (from the client/stakeholder perspective): qualitative objectives and, wherever possible, corresponding quantitative metrics with target values to be achieved within the project. These objectives should directly address the pains and gains identified in the user analysis.
+Success Criteria:
+- Users can identify the regions with the highest number of meteorite landings.
+- Users can understand the distribution of meteorite masses.
+- Users can distinguish between the most common meteorite classes.
 
-It is also helpful to specify what is explicitly excluded from the project objectives (out of scope).
+Quantitative criteria:
+- At least 4 clear visualizations covering location, mass, class, and time.
+- Data includes more than 100 observations and at least 6 features.
+
+Out of Scope:
+- No real-time data updates.
+- No advanced predictive modeling or machine learning.
 
 ## Stakeholder Analysis
-List the people involved in and affected by the project. Describe their goals and relationships with each other. Visualisation in the form of a stakeholder map can provide a quick overview.
+Stakeholders include:
+
+- Project team members: responsible for data analysis and visualization.
+- Lecturers: evaluate the project and provide feedback.
+- Students and general public: end users of the visualization.
+
+The project team develops the product, lecturers assess its quality, and users benefit from understanding the data.
 
 ## User Analysis
-Analyse the target audience of the visualization product and create at least 2 personas with **relevant attributes** such as domain expertise, data literacy, technical environment (devices, screen sizes), frequency of use etc. Amend each persona with the dimensions of the customer profile side in the Value Proposition Canvas @Osterwalder2014:
 
-* **User tasks** (jobs): What tasks are users trying to accomplish? Consider functional jobs (e.g. analysing data, making decisions), social jobs (e.g. reporting to stakeholders, collaborating with colleagues) and emotional jobs (e.g. feeling confident in their decisions).
-* **Pains**: What obstacles, risks or undesired outcomes do users currently face? What makes their current approach frustrating or inefficient?
-* **Gains**: What outcomes and benefits do users expect or desire? What would exceed their expectations?
+PERSONA 1
+Name: Max
+Age: 22
+Occupation: Student
+
+Domain expertise: Low to medium  
+Data literacy: Basic  
+Device: Laptop  
+Usage: Occasional  
+
+User Tasks:
+- Understand basic patterns in data
+- Learn about meteorites
+
+Pains:
+- Data is hard to interpret in raw form
+- Lack of clear visual explanations
+
+Gains:
+- Easy-to-understand visualizations
+- Clear insights without technical knowledge
+
+PERSONA 2
+Name: Anna
+Age: 35
+Occupation: Journalist
+
+Domain expertise: Medium  
+Data literacy: Medium  
+Device: Laptop / Tablet  
+Usage: Regular  
+
+User Tasks:
+- Find interesting data stories
+- Use insights for reporting
+
+Pains:
+- Time-consuming data exploration
+- Lack of summarized insights
+
+Gains:
+- Quick access to patterns and trends
+- Visually appealing charts for storytelling
 
 
 ## Situation Assessment
-Describe the available resources (data, personnel, material, software/tools, infrastructure, etc.) and time as well as restrictions and constraints. Possible risks that may arise during the project are also identified.
+Resources:
+- Dataset containing meteorite landings with attributes such as mass, location, class, and year.
+- Team members with basic Python and data visualization knowledge.
+- Tools: Python, Quarto, GitHub.
 
+Constraints:
+- Limited time until project deadlines.
+- Requirement for reproducibility.
+
+Risks:
+- Data quality issues (missing values, inconsistencies)
+- Technical challenges in visualization or deployment
 
 ## Visualization Concept
-Translate the project objectives into a concrete visualization concept. This corresponds to the value map side of the Value Proposition Canvas [@Osterwalder2014] – describe how the proposed visualization product addresses the users' tasks, relieves their pains and creates gains. Address the following aspects:
+The visualization product is designed to translate the project objectives into an intuitive and accessible representation of meteorite data. It enables users to explore patterns in meteorite distribution, mass, and classification in a structured and visually clear way, addressing their need for simple and understandable insights.
 
-* **Product form**: Composition of the visualization product – dashboard, data story, infographic, exploratory tool, etc.
-* **Visual encodings**: Types of charts and visualizations to be used – e.g. bar chart, line chart, scatter plot, map, etc.
-* **Interactivity**: Static vs. dynamic/interactive elements – filtering, drill-down, tooltips, linked views, etc.
-* **Narrative and annotation**: Text elements, storytelling structure, annotations and contextual information.
-* **Target medium and integration**: Embedding in the target environment – e.g. website, intranet, app, print, etc.
+Product form:
+The chosen format is a data story presented as a web-based application using Quarto. This format allows a guided narrative, where users are introduced step by step to the most important aspects of the dataset. At the same time, it allows light exploration, combining storytelling with elements of an exploratory tool.
 
-For each design decision, articulate the intended value along three dimensions:
+Visual encodings:
+The visualization includes multiple complementary chart types:
+- A world map displaying meteorite landings based on latitude and longitude to reveal spatial patterns.
+- A histogram showing the distribution of meteorite mass to identify typical ranges and outliers.
+- A bar chart comparing the frequency of different meteorite classes (recclass).
+- A line chart illustrating how meteorite discoveries change over time.
 
-* **Cognitive and analytical value**: How does the design amplify the user's ability to detect patterns, identify outliers, understand distributions or discover relationships [@card1999; @vanwijk2005]?
-* **Communicative value**: How does the design support the communication of information to the target audience profile(s)? 
-* **Experiential and aesthetic value**: How do the visual and interactive qualities of the design foster engagement, trust and willingness to adopt the product in practice?
+These visual encodings are chosen to represent key analytical dimensions such as distribution, comparison, location, and temporal trends.
 
-Justify the concept by mapping it explicitly to the project objectives and the user needs identified in the user analysis.
+Interactivity:
+The visualizations include light interactivity to support user exploration without increasing complexity. This includes:
+- Tooltips to display additional information when hovering over data points
+- Zooming and panning functionality for the map
+- Optional highlighting or filtering (e.g. by meteorite class or time range, if feasible)
+
+This level of interactivity allows users to engage with the data while keeping the system simple and robust.
+
+Narrative and annotation:
+The visualization follows a clear storytelling structure: introduction, exploration of key variables, and summary of findings. Each visualization is accompanied by short explanatory text and annotations to guide the user and highlight key insights. This reduces cognitive load and helps users interpret the data correctly.
+
+Target medium and integration:
+The visualization product will be published as a web-based application using GitHub Pages. This ensures easy accessibility across devices such as laptops and tablets without requiring additional software installation.
+
+Value of the design:
+
+Cognitive and analytical value:
+The selected visual encodings enhance pattern recognition and analytical understanding. The map supports spatial reasoning, the histogram reveals distributions and outliers, the bar chart enables comparison, and the line chart highlights trends over time. Interactivity further supports exploration and deeper insight.
+
+Communicative value:
+The use of simple, well-known chart types combined with a structured narrative ensures that the information is communicated clearly to a broad audience. Annotations and explanations help users with limited data literacy understand the key insights.
+
+Experiential and aesthetic value:
+A clean and minimal visual design combined with light interactivity creates an engaging user experience. The ability to explore the data (e.g. through tooltips or zooming) increases user involvement and trust in the visualization, while maintaining clarity and usability.
+
+Justification:
+The visualization concept directly supports the project objectives by enabling users to understand meteorite patterns in an intuitive and structured way. It addresses user needs by simplifying complex data, reducing cognitive effort, and providing both guided storytelling and limited interactive exploration.
 
 
 ## Project Plan
@@ -57,30 +147,29 @@ Divide the project into individual phases, describe them briefly and draw up a p
 gantt
     title Project Plan
     dateFormat YYYY-MM-DD
-    tickInterval 5day
-    section Project Understanding
-        Initiation workshop and context analysis     :a1, 2024-07-01, 1d
-        Stakeholder and user analysis     :a3, 2024-07-02, 5d
-        Situation assessment    :a4, 2024-07-06, 1d
-        Project objectives and visualization concept    :a5, 2024-07-07, 1d
-        Sign project charta: milestone, m1, 2024-07-08, 1d
     
-    section Data Acquisition and Exploration
-        Acquire data :a6, 2024-07-08, 3d
-        Exploratory data analysis   :a7, 2024-07-09, 2d
-        Discuss data report: milestone, m2, 2024-07-11, 1d
-        
-    section Visual Encoding and Design
-        Overview charts   :a8, 2024-07-11, 3d
-        Maps :a9, 2024-07-11, 5d
-        Implement Dashboard prototype :a10, 2024-07-16, 5d
-        Complete visualization report :a10, 2024-07-21, 1d
-    section Evaluation
-        Prepare presentation :a10, 2024-07-22, 2d
-        Project presentation : milestone, m2, 2024-07-24, 4m
+    section Project Understanding
+        Project setup            :a1, 2026-03-18, 2d
+        Project charta           :a2, 2026-03-19, 1d
+
+    section Data Exploration
+        Data cleaning            :a3, 2026-03-21, 5d
+        Data analysis            :a4, 2026-03-26, 5d
+
+    section Visualization
+        Create visualizations    :a5, 2026-04-01, 10d
+        Build data story         :a6, 2026-04-11, 7d
+
+    section Finalization
+        Documentation            :a7, 2026-05-01, 7d
+        Presentation prep        :a8, 2026-05-20, 5d
 ```
 
-See [Mermaid syntax for Gantt charts](https://mermaid.js.org/syntax/gantt.html). It might not be displayed correctly in Safari &#8594; use Chrome. [Live editor with export functionality](https://mermaid.live/)
 
 ## Roles and Contact Details
 List the people involved in the development work here with their role titles, tasks and contact details.
+Team Members:
+
+- Baskaran Amutha (baskaamu): Github Setup and other technicallity
+- Eros Palumbo (palero01): Project charta and ideas
+- Nicolas Schwaiger (schwani8): Support
