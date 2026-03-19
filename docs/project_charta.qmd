@@ -20,7 +20,7 @@ Success Criteria:
 
 Quantitative criteria:
 - At least 4 clear visualizations covering location, mass, class, and time.
-- Data includes more than 20,000 observations and at least 6 features.
+- Data includes more than 100 observations and at least 6 features.
 
 Out of Scope:
 - No real-time data updates.
@@ -62,9 +62,9 @@ Gains:
 PERSONA 2
 Name: Anna
 Age: 35
-Occupation: Journalist in training
+Occupation: Journalist
 
-Domain expertise: Low  
+Domain expertise: Medium  
 Data literacy: Medium  
 Device: Laptop / Tablet  
 Usage: Regular  
@@ -126,7 +126,10 @@ The visualization includes multiple complementary chart types:
 - A histogram showing the distribution of meteorite mass to identify typical ranges and outliers.
 - A bar chart comparing the frequency of different meteorite classes (recclass).
 - A line chart illustrating how meteorite discoveries change over time.
+<<<<<<< HEAD
 - 
+=======
+>>>>>>> parent of f12a19f (Update project_charta.qmd)
 
 These visual encodings are chosen to represent key analytical dimensions such as distribution, comparison, location, and temporal trends.
 
