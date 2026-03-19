@@ -1,20 +1,22 @@
 # Project Charta
 ## Context and Scope
-This project focuses on the analysis of meteorite landings worldwide. Meteorites are classified based on their composition and recorded with 
+<!-- This project focuses on the analysis of meteorite landings worldwide. Meteorites are classified based on their composition and recorded with 
 attributes such as mass, location, and year of discovery.
 The main goal is to explore patterns in meteorite distribution, size, and classification. The project aims to answer questions such as where 
 meteorites most frequently land, how their mass varies, and which types are most common.
 The expected benefit is to provide an accessible and visually intuitive understanding of meteorite data for educational and exploratory purposes.
-The visualization product will be published as an online data story using a Quarto-based website hosted on GitHub Pages.
+The visualization product will be published as an online data story using a Quarto-based website hosted on GitHub Pages. -->
+
+This project develops the "Meteorite Market & Discovery Dashboard". Beyond simple mapping, it correlates scientific NASA landing data with historical market values and geographic environmental factors. The goal is to provide a transparent valuation tool for collectors to prevent fraud and an "Opportunity Map" for meteorite hunters by identifying "Discovery Gaps" based on soil and climate data.
 
 ## Project Objectives and Success Criteria
 Objective:
-Enable users to understand global patterns of meteorite landings, including geographic distribution, mass variation, and classification types.
+Enable users to understand global patterns of meteorite landings while providing a data-driven valuation framework and identifying unexplored search zones.
 
 Success Criteria:
-- Users can identify the regions with the highest number of meteorite landings.
-- Users can understand the distribution of meteorite masses.
-- Users can distinguish between the most common meteorite classes.
+- Users can identify high-value "Discovery Gaps" by overlaying NASA data with aridity and land-cover layers.
+- The system successfully calculates an Estimated Market Value (EMV) based on a rule-based valuation engine.
+- Users can distinguish between high-market-value classes (e.g., Pallasites) and common finds.
 
 Quantitative criteria:
 - At least 4 clear visualizations covering location, mass, class, and time.
@@ -35,7 +37,7 @@ The project team develops the product, lecturers assess its quality, and users b
 
 ## User Analysis
 
-PERSONA 1
+<!-- PERSONA 1
 Name: Max
 Age: 22
 Occupation: Student
@@ -77,12 +79,30 @@ Pains:
 
 Gains:
 - Quick access to patterns and trends
-- Visually appealing charts for storytelling
+- Visually appealing charts for storytelling -->
+
+Persona 1: The Amateur Investor (Kevin, 28)
+
+User Tasks: Wants to verify if a meteorite price on eBay is fair.
+
+Pains: Lack of market transparency; fear of scams/fakes.
+
+Gains: A data-driven "Fair Value" benchmark based on mass and classification.
+
+
+Persona 2: The Field Hunter (Sarah, 35)
+
+User Tasks: Planning an expedition to find unrecorded meteorites.
+
+Pains: NASA data only shows what was found, not what is still there.
+
+Gains: A heatmap showing high-probability search zones (e.g., arid deserts with low vegetation).
 
 
 ## Situation Assessment
 Resources:
-- Dataset containing meteorite landings with attributes such as mass, location, class, and year.
+- Datasets containing meteorite landings with attributes such as mass, location, class, and year. Aridity Index and Land Cover data to calculate the "Discovery Probability".
+- A self-curated reference table derived from auction houses (e.g., Heritage Auctions) to assign Euro-values.
 - Team members with basic Python and data visualization knowledge.
 - Tools: Python, Quarto, GitHub.
 
@@ -98,7 +118,7 @@ Risks:
 The visualization product is designed to translate the project objectives into an intuitive and accessible representation of meteorite data. It enables users to explore patterns in meteorite distribution, mass, and classification in a structured and visually clear way, addressing their need for simple and understandable insights.
 
 Product form:
-The chosen format is a data story presented as a web-based application using Quarto. This format allows a guided narrative, where users are introduced step by step to the most important aspects of the dataset. At the same time, it allows light exploration, combining storytelling with elements of an exploratory tool.
+<!-- The chosen format is a data story presented as a web-based application using Quarto. This format allows a guided narrative, where users are introduced step by step to the most important aspects of the dataset. At the same time, it allows light exploration, combining storytelling with elements of an exploratory tool. -->
 
 Visual encodings:
 The visualization includes multiple complementary chart types:
@@ -106,7 +126,7 @@ The visualization includes multiple complementary chart types:
 - A histogram showing the distribution of meteorite mass to identify typical ranges and outliers.
 - A bar chart comparing the frequency of different meteorite classes (recclass).
 - A line chart illustrating how meteorite discoveries change over time.
-- Others
+- 
 
 These visual encodings are chosen to represent key analytical dimensions such as distribution, comparison, location, and temporal trends.
 
@@ -157,6 +177,10 @@ gantt
         Data cleaning            :a3, 2026-03-21, 5d
         Data analysis            :a4, 2026-03-26, 5d
 
+     section Data Enrichment
+        Price Index Research     :a9, 2026-03-22, 4d
+        Geospatial Layer Join    :a10, 2026-03-27, 4d
+
     section Visualization
         Create visualizations    :a5, 2026-04-01, 10d
         Build data story         :a6, 2026-04-11, 7d
@@ -173,4 +197,4 @@ Team Members:
 
 - Baskaran Amutha (baskaamu): Github Setup and other technicallity
 - Eros Palumbo (palero01): Project charta and ideas
-- Nicolas Schwaiger (schwani8): Support
+- Nicolas Schwaiger (schwani8): Design, Layout and Support
