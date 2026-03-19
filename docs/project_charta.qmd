@@ -1,20 +1,17 @@
 # Project Charta
 ## Context and Scope
-This project focuses on the analysis of meteorite landings worldwide. Meteorites are classified based on their composition and recorded with 
-attributes such as mass, location, and year of discovery.
-The main goal is to explore patterns in meteorite distribution, size, and classification. The project aims to answer questions such as where 
-meteorites most frequently land, how their mass varies, and which types are most common.
-The expected benefit is to provide an accessible and visually intuitive understanding of meteorite data for educational and exploratory purposes.
-The visualization product will be published as an online data story using a Quarto-based website hosted on GitHub Pages.
+
+This project focuses on the socio-economic and geographic analysis of meteorite discoveries worldwide. While NASA records where meteorites were found, the data is heavily biased by human presence and environmental conditions.
+The "Meteorite Treasure Map" aims to explain the "Discovery Gap": Why do we find thousands of meteorites in the Sahara or Antarctica, but almost none in the Black Forest? By correlating NASA landing data with population density, GDP, and land cover, we visualize the Discovery Probability. The goal is to shift the perspective from where meteorites landed to why we found them there, ultimately creating an "Opportunity Map" for future discoveries.
 
 ## Project Objectives and Success Criteria
 Objective:
-Enable users to understand global patterns of meteorite landings, including geographic distribution, mass variation, and classification types.
+Enable users to understand that meteorite distribution maps are often maps of human activity and geography. The project identifies "Discovery Gaps" by overlaying NASA data with socio-economic and environmental layers.
 
 Success Criteria:
-- Users can identify the regions with the highest number of meteorite landings.
-- Users can understand the distribution of meteorite masses.
-- Users can distinguish between the most common meteorite classes.
+- Users can identify the correlation between population density and discovery rates.
+- Users can distinguish between "High-Potential" (arid, flat) and "Low-Visibility" (forest, urban) zones.
+- The visualization successfully highlights regions where meteorites are likely hidden but unrecorded
 
 Quantitative criteria:
 - At least 4 clear visualizations covering location, mass, class, and time.
@@ -83,6 +80,9 @@ Gains:
 ## Situation Assessment
 Resources:
 - Dataset containing meteorite landings with attributes such as mass, location, class, and year.
+- Scientific Data: NASA Meteorite Landings.
+- Socio-Economic Data: World Bank (GDP per capita, Population Density).
+- Environmental Data: MODIS Land Cover and Aridity Index (to calculate visibility and preservation).
 - Team members with basic Python and data visualization knowledge.
 - Tools: Python, Quarto, GitHub.
 
@@ -92,30 +92,40 @@ Constraints:
 
 Risks:
 - Data quality issues (missing values, inconsistencies)
+- GDP/Population data might be at a country level while meteorites are point-based (requires spatial joining).
 - Technical challenges in visualization or deployment
 
 ## Visualization Concept
 The visualization product is designed to translate the project objectives into an intuitive and accessible representation of meteorite data. It enables users to explore patterns in meteorite distribution, mass, and classification in a structured and visually clear way, addressing their need for simple and understandable insights.
 
 Product form:
-The chosen format is a data story presented as a web-based application using Quarto. This format allows a guided narrative, where users are introduced step by step to the most important aspects of the dataset. At the same time, it allows light exploration, combining storytelling with elements of an exploratory tool.
+The chosen format is a data story presented as a web-based application using Quarto. This format allows a guided narrative, where users are introduced step by step to the most important aspects of the dataset. At the same time, it allows light exploration, combining storytelling with elements of an exploratory tool. It follows a narrative: from the "Illusion" (NASA's raw map) to the "Reality" (Adjusted for human and geographic bias).
 
 Visual encodings:
-The visualization includes multiple complementary chart types:
+<!-- The visualization includes multiple complementary chart types:
 - A world map displaying meteorite landings based on latitude and longitude to reveal spatial patterns.
 - A histogram showing the distribution of meteorite mass to identify typical ranges and outliers.
 - A bar chart comparing the frequency of different meteorite classes (recclass).
-- A line chart illustrating how meteorite discoveries change over time.
+- A line chart illustrating how meteorite discoveries change over time. -->
+
+- Bivariate Choropleth Map: To show the intersection of population density and discovery frequency.
+- Correlation Plots: GDP vs. Number of recorded finds to check for "Wealth Bias."
+- Heatmap of the "Discovery Gap": Highlighting arid, uninhabited areas with high preservation potential.
+- Scatterplot: Mass vs. Discovery Year, filtered by Land Cover type.
 
 These visual encodings are chosen to represent key analytical dimensions such as distribution, comparison, location, and temporal trends.
 
 Interactivity:
-The visualizations include light interactivity to support user exploration without increasing complexity. This includes:
+<!-- The visualizations include light interactivity to support user exploration without increasing complexity. This includes:
 - Tooltips to display additional information when hovering over data points
 - Zooming and panning functionality for the map
-- Optional highlighting or filtering (e.g. by meteorite class or time range, if feasible)
+- Optional highlighting or filtering (e.g. by meteorite class or time range, if feasible) -->
 
-This level of interactivity allows users to engage with the data while keeping the system simple and robust.
+<!-- This level of interactivity allows users to engage with the data while keeping the system simple and robust. -->
+
+Layer Toggles: Switch between "Raw Finds" and "Discovery Probability."
+
+Region Inspector: Click a region to see its "Discovery Efficiency Score" (based on Aridity and Population).
 
 Narrative and annotation:
 The visualization follows a clear storytelling structure: introduction, exploration of key variables, and summary of findings. Each visualization is accompanied by short explanatory text and annotations to guide the user and highlight key insights. This reduces cognitive load and helps users interpret the data correctly.
@@ -141,7 +151,7 @@ The visualization concept directly supports the project objectives by enabling u
 ## Project Plan
 Divide the project into individual phases, describe them briefly and draw up a preliminary timetable, e.g. as a Gantt chart:
 
-```{mermaid}
+<!-- ```{mermaid}
 %%| label: fig-project-plan
 %%| fig-cap: Preliminary project plan in the form of a Gantt chart.
 gantt
@@ -163,13 +173,35 @@ gantt
     section Finalization
         Documentation            :a7, 2026-05-01, 7d
         Presentation prep        :a8, 2026-05-20, 5d
-```
+``` -->
+
+%%| label: fig-project-plan
+%%| fig-cap: Preliminary project plan with a focus on data correlation.
+gantt
+    title Project Plan: Meteorite Treasure Map
+    dateFormat YYYY-MM-DD
+    
+    section Foundation
+        Project setup & Charta      :a1, 2026-03-18, 2d
+        Data Acquisition (NASA/WB)   :a2, 2026-03-20, 3d
+
+    section Data Correlation
+        Socio-Economic Mapping       :a3, 2026-03-23, 5d
+        Environmental Layer Join     :a4, 2026-03-28, 5d
+
+    section Visualization
+        Bivariate Map Development    :a5, 2026-04-05, 7d
+        Storytelling & Scrollytelling:a6, 2026-04-12, 7d
+
+    section Finalization
+        Documentation & Refinement   :a7, 2026-05-01, 7d
+        Presentation Preparation     :a8, 2026-05-15, 5d
 
 
 ## Roles and Contact Details
 List the people involved in the development work here with their role titles, tasks and contact details.
 Team Members:
 
-- Baskaran Amutha (baskaamu): Github Setup and other technicallity
-- Eros Palumbo (palero01): Project charta and ideas
-- Nicolas Schwaiger (schwani8): Support
+- Baskaran Amutha (baskaamu): Technical Setup and Data Integration
+- Eros Palumbo (palero01): Project Lead and Concept & Socio-Economic Analysis.
+- Nicolas Schwaiger (schwani8): Design, Visualization & Layout Support.
