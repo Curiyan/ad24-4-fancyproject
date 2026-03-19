@@ -178,6 +178,7 @@ gantt
         Presentation prep        :a8, 2026-05-20, 5d
 ``` -->
 
+```{mermaid}
 %%| label: fig-project-plan
 %%| fig-cap: Preliminary project plan with a focus on data correlation.
 gantt
@@ -199,7 +200,7 @@ gantt
     section Finalization
         Documentation & Refinement   :a7, 2026-05-01, 7d
         Presentation Preparation     :a8, 2026-05-15, 5d
-
+```
 
 ## Roles and Contact Details
 List the people involved in the development work here with their role titles, tasks and contact details.
