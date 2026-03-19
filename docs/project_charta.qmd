@@ -76,8 +76,8 @@ Gains:
 - Quick access to patterns and trends
 - Visually appealing charts for storytelling
 
-![ ](images/bild1.png){ width=70% }
-![ ](images/bild1.png){ width=70% }
+![ ](pics/bild1.png){ width=70% }
+![ ](pics/bild2.png){ width=70% }
 
 
 ## Situation Assessment
