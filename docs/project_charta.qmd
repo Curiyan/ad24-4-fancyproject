@@ -106,17 +106,7 @@ The visualization includes multiple complementary chart types:
 - A histogram showing the distribution of meteorite mass to identify typical ranges and outliers.
 - A bar chart comparing the frequency of different meteorite classes (recclass).
 - A line chart illustrating how meteorite discoveries change over time.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-- 
-=======
->>>>>>> parent of f12a19f (Update project_charta.qmd)
-=======
->>>>>>> parent of f12a19f (Update project_charta.qmd)
-=======
 - Others
->>>>>>> parent of b0a39fb (amutha charta 2)
 
 These visual encodings are chosen to represent key analytical dimensions such as distribution, comparison, location, and temporal trends.
 
