@@ -186,7 +186,7 @@ gantt
     dateFormat YYYY-MM-DD
     
     section Foundation
-        Project setup & Charta      :a1, 2026-03-18, 2d
+        Project setup & Charta       :a1, 2026-03-18, 2d
         Data Acquisition (NASA/WB)   :a2, 2026-03-20, 3d
 
     section Data Correlation
