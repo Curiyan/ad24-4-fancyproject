@@ -127,7 +127,10 @@ The visualization includes multiple complementary chart types:
 - A bar chart comparing the frequency of different meteorite classes (recclass).
 - A line chart illustrating how meteorite discoveries change over time.
 <<<<<<< HEAD
+<<<<<<< HEAD
 - 
+=======
+>>>>>>> parent of f12a19f (Update project_charta.qmd)
 =======
 >>>>>>> parent of f12a19f (Update project_charta.qmd)
 
