@@ -32,52 +32,69 @@ The project team develops the product, lecturers assess its quality, and users b
 
 ## User Analysis
 
-PERSONA 1
-Name: Max
-Age: 22
-Occupation: Student
+PERSONA 1 — 
+Name: Lukas (Citizen Scientist)
+Age: 29
 
-Domain expertise: Low to medium  
-Data literacy: Basic  
-Device: Laptop  
-Usage: Occasional  
+Background & Behavior
+Software developer with a strong interest in astronomy.
+Lives in a forested region in Southern Germany with low meteorite recovery rates.
+Approaches problems through data analysis and pattern recognition.
 
-User Tasks:
-- Understand basic patterns in data
-- Learn about meteorites
+Goals
 
-Pains:
-- Data is hard to interpret in raw form
-- Lack of clear visual explanations
+- Validate detection bias caused by vegetation and soil coverage
+- Demonstrate that absence of finds does not imply absence of meteorites
+- Understand and communicate population-driven data bias
 
-Gains:
-- Easy-to-understand visualizations
-- Clear insights without technical knowledge
+Pain Points
 
-PERSONA 2
-Name: Anna
-Age: 35
-Occupation: Journalist
+- Binary map logic (find vs. no find) lacks probabilistic context
+- No information about discovery context (accidental vs. systematic findings)
+- Misleading spatial patterns due to uneven human activity
 
-Domain expertise: Medium  
-Data literacy: Medium  
-Device: Laptop / Tablet  
-Usage: Regular  
+Key Features
 
-User Tasks:
-- Find interesting data stories
-- Use insights for reporting
+- Detection Probability Map
+- Visualizes likelihood of meteorite discovery based on surface conditions
+- Population Bias Adjustment
+- Normalizes find density relative to human presence
 
-Pains:
-- Time-consuming data exploration
-- Lack of summarized insights
+Local Impact Estimator
+- Estimates expected meteorite falls vs. actual detection probability
 
-Gains:
-- Quick access to patterns and trends
-- Visually appealing charts for storytelling
+PERSONA 2 — 
+Name:Dr. Aris (Expedition Planner)
+Age: 45
 
-![ ](pics/bild1.png){ width=70% }
-![ ](pics/bild2.png){ width=70% }
+Background & Behavior
+Field geologist planning high-cost meteorite expeditions.
+Decision-making is driven by risk reduction and expected return.
+
+Goals
+- Maximize return on field investigation
+- Identify under-explored but high-potential regions
+- Optimize timing and logistics based on environmental conditions
+
+Pain Points
+
+- Fragmented data across multiple platforms
+- High financial risk due to poor site selection
+- No integrated way to evaluate terrain suitability and search history
+
+Key Features
+
+- Opportunity Map (Bivariate Analysis)
+- Combines low population density with high aridity
+
+Geological Stability Filter
+- Highlights surfaces with long-term preservation potential
+
+Accessibility Index
+- Estimates logistical effort based on distance to infrastructure
+
+![ ](pics/lukas.jpeg.png){ width=70% }
+![ ](pics/aris.jpeg.png){ width=70% }
 
 
 ## Situation Assessment
